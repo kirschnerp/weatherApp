@@ -19,20 +19,27 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title> </title>
+    <title>Weather App </title>
   </head>
 
   <body>
-    <div class="card mb-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="City Search" aria-label="City Search" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-                </div>
-              </div>
-          </div>
+    <header class="head1">
+      <h1>Weather Dashboard</h1>
+    </header>
+   <div class="row no-gutters">
+     <div class="col-md-4">
+       <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="City"><button class="btn btn-outline-secondary" type="submit"><i class="fa fa-search"></i> </button> 
+       </div>
+         <ul class="list-group">
+          <li class="list-group-item"></li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Morbi leo risus</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+         </ul>
+       </div>
+    
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -40,15 +47,11 @@
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
-        </div>
-      </div>
-        
-    <!-- Retrieved data will be dumped here 
-    <div class="city"></div>
-    <div class="wind"></div>
-    <div class="humidity"></div>
-    <div class="temp"></div>
-    -->
+          </div>
+   
+              
+      
+    
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
