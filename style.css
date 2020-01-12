@@ -4,16 +4,6 @@ body {
   line-height: 1;
 }
 
-/*textarea {
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
-  padding-right: 780px;
-}
-*/
 .head1 {
   text-align: center;
   background: black;
@@ -22,19 +12,17 @@ body {
   padding: 10px;
 }
 
-.description{
-  white-space: pre-wrap;
+.card-body {
+ border-style: solid;
+ border-radius: 0;
+ border-color: black;
+ padding: 10px;
 }
 
-.time-block{
-  text-align: center;
-  border-radius: 15px;
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
+.five-day {
+ border-radius: 0;
+ border-color: black;
+ padding: 10px;
 }
 
 .btn {
