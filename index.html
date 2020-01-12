@@ -19,36 +19,79 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title> </title>
+    <title>Weather App </title>
   </head>
 
   <body>
-    <div class="card mb-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="City Search" aria-label="City Search" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-                </div>
-              </div>
+    <header class="head1">
+      <h1>Weather Dashboard</h1>
+    </header>
+   <div class="row no-gutters">
+     <div class="col-md-4">
+       <div class="input-group mb-3">
+        <input type="text" id="city-name" placeholder="City"><button class="btn btn-outline-secondary" id="search-button" type="submit"><i class="fa fa-search"></i> </button> 
+       </div>
+         <ul id="list-group">
+        </ul>
+       </div>
+    
+        <div class="col-md-8">
+          <div class="card-body">
+            <div class="city"></div>
+            <div class="temp"></div>
+            <div class="humidity"></div>
+            <div class="wind"></div>
+            <div class="uv"></div>
           </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-        
-    <!-- Retrieved data will be dumped here 
-    <div class="city"></div>
-    <div class="wind"></div>
-    <div class="humidity"></div>
-    <div class="temp"></div>
-    -->
+          <div class="five-day">
+            <h5 class="card-title">5 Day Forecast:</h5>
+              <div class="day1">
+                <ul>
+                  <li class="date1"></li>
+                  <li class="icon1"></li>
+                  <li class="temp1"></li>
+                  <li class="humid1"></li>
+                </ul> 
+             </div>  
+              <div class="day2">
+                <ul>
+                  <li class="date2"></li>
+                  <li class="icon2"></li>
+                  <li class="temp2"></li>
+                  <li class="humid2"></li>
+                </ul>
+             </div> 
+              <div class="day3">
+                <ul>
+                 <li class="date3"></li>
+                 <li class="icon3"></li>
+                 <li class="temp3"></li>
+                 <li class="humid3"></li>
+              </ul>
+            </div> 
+              <div class="day4">
+              <ul>
+                <li class="date4"></li>
+                <li class="icon4"></li>
+                <li class="temp4"></li>
+                <li class="humid4"></li>
+            </ul>
+           </div> 
+              <div class="day5">
+              <ul>
+                <li class="date5"></li>
+                <li class="icon5"></li>
+                <li class="temp5"></li>
+                <li class="humid5"></li>
+            </ul>
+           </div> 
+         </div>
+       </div>
+     </div>
+   
+              
+      
+    
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
@@ -58,9 +101,5 @@
   </body>
   
   
-    <body>
     
-
-    
-  </body>
 </html>
