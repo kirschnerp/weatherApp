@@ -100,38 +100,47 @@ $.ajax({
       days[i].icon = response.list[i].weather[0].icon;
       days[i].temp = response.list[i].main.temp;
       days[i].humidity = response.list[i].main.humidity;
-      console.log(days[i]);
-    }
+      }
+      console.log(response.list[0].dt);
+    //add data of 5 day forecast to html
+    $(".date1").append(days[0].date);
+    $(".icon1").html("<img src='http://openweathermap.org/img/wn/" + days[0].icon + "@2x.png' alt='Icon depicting current weather.'>");
+    $(".humid1").append("Humidity: " + days[0].humidity);
+    $(".date2").append(days[1].date);
+    $(".icon2").html("<img src='http://openweathermap.org/img/wn/" + days[1].icon + "@2x.png' alt='Icon depicting current weather.'>");
+    $(".humid2").append(days[1].humidity);
+    $(".date3").append(days[2].date);
+    $(".icon3").html("<img src='http://openweathermap.org/img/wn/" + days[2].icon + "@2x.png' alt='Icon depicting current weather.'>");
+    $(".humid3").append("Humidity: " + days[2].humidity);
+    $(".date4").append(days[3].date);
+    $(".icon4").html("<img src='http://openweathermap.org/img/wn/" + days[3].icon + "@2x.png' alt='Icon depicting current weather.'>");
+    $(".humid4").append("Humidity: " + days[3].humidity);
+    $(".date5").append(days[4].date);
+    $(".icon5").html("<img src='http://openweathermap.org/img/wn/" + days[4].icon + "@2x.png' alt='Icon depicting current weather.'>");
+    $(".humid5").append("Humidity: " + days[4].humidity);
 
-    $(".date1").val(days[0].date);
-    $(".icon1").attr("href", days[0].icon);
-    $(".temp1").val(days[0].temp);
-    $(".humid1").val(days[0].humidity);
-    $(".date2").text(days[1].dt_txt);
-    $(".icon2").attr("href",days[1].icon);
-    $(".temp2").text(days[1].temp);
-    $(".humid2").text(days[1].humidity);
-    $(".date3").text(days[2].dt_txt);
-    $(".icon3").attr("href", days[2].icon);
-    $(".temp3").text(days[2].temp);
-    $(".humid3").text(days[2].humidity);
-    $(".date4").text(days[3].dt_txt);
-    $(".icon4").attr("href", days[3].icon);
-    $(".temp4").text(days[3].temp);
-    $(".humid4").text(days[3].humidity);
-    $(".date5").text(days[4].dt_txt);
-    $(".icon5").attr("href", days[4].icon);
-    $(".temp5").text(days[4].temp);
-    $(".humid5").text(days[4].humidity);
-
-    // Converts the temp to Kelvin with the below formula
-   var tempF1 = (days.temp - 273.15) * 1.80 + 32;
-   var tempFar = Math.round(tempF1)
-    $(".temp1").text(tempFar);
-    $(".temp2").text(tempFar);
-    $(".temp3").text(tempFar);
-    $(".temp4").text(tempFar);
-    $(".temp5").text(tempFar);
+    console.log(days[0].temp);
+  // Converts the temp to Kelvin with the below formula
+   var tempF1 = days[0].temp;
+   var tempFar1 = Math.round(tempF1 - 273.15) * 1.80 + 32;
+   var tempF2 = (days[1].temp - 273.15) * 1.80 + 32;
+   var tempFar2 = Math.round(tempF2);
+   var tempF3 = (days[2].temp - 273.15) * 1.80 + 32;
+   var tempFar3 = Math.round(tempF3);
+   var tempF4 = (days[3].temp - 273.15) * 1.80 + 32;
+   var tempFar4 = Math.round(tempF4);
+   var tempF5 = (days[4].temp - 273.15) * 1.80 + 32;
+   var tempFar5 = Math.round(tempF5);
+   
+   //insert shortend farenheit temp into html
+   $(".temp1").append("Temp: " + tempFar1);
+   $(".temp2").append("Temp: " + tempFar2);
+   $(".temp3").append("Temp: " + tempFar3);
+   $(".temp4").append("Temp: " + tempFar4);
+   $(".temp5").append("Temp: " + tempFar5);
+   console.log(tempF1);
+   console.log(tempFar1);
+    
     
     
 
@@ -140,7 +149,7 @@ $.ajax({
 });
  //////////////////////////////////////////////////////////////////////////////////////////
 //local storage of which I have no idea how to get to work
-let ul = $("#history");
+/*let ul = $("#history");
 let itemsArray = localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : [];
 let data = JSON.parse(localStorage.getItem("items"));
 
@@ -163,7 +172,7 @@ $("#search-button").on("click", function () {
     $(".newcity").remove();
     localStorage.clear();
     $("input").empty();
-})
+})*/
 });
   
 
